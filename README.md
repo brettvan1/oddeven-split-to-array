@@ -1,5 +1,5 @@
 # oddeven-split-to-array
-split data on delimiter and put in odd even variables
+split data on delimiter and put in odd & even variables
 
 # Select and copy data from a source
 
@@ -9,14 +9,6 @@ lord.nikon = tracer556
 davinci.virus = moomoomoo
 zero.cool = eatmyshorts5
 acid.burn = ringoffire5
-
-#set the clipboard or CSV data input to a variable
-
-$example = get-clipboard
-
-# split data on the delimiter
-
-$example=($example.split("<delimiter>")).trim
 
 # RESULTS OF SPLIT & trim
 
@@ -33,10 +25,7 @@ eatmyshorts5
 acid.burn
 ringoffire5
 
-$e
 #	using modulus 2 you specifiy ODD and EVEN preferences to store your new array based on the delimiter
-
-# Obtain the odd elements of array
 
 $odd=0..($example.length-1) | %{ if(-not ($_ % 2) ) { $example[$_] } }
 
